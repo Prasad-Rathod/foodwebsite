@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">  
+    <title>contact</title>
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(contact.jpg);
+
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    /* background: #55ffe5; */
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif ;
+}
+
+.container{
+width: 80%;
+margin: 50px auto;
+}
+
+.contact-box{
+    background:#fff;
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    
+}
+
+.contact-right{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    background:	#48D1CC;
+    color:black;
+    
+}
+h1{
+    margin-bottom: 10px;
+    color:black;
+}
+
+h3{
+    margin-bottom: 40px;
+}
+
+.container p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color:black;
+}
+
+.input-row{
+
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.input-row .input-group{
+
+    flex-basis: 45%;
+    margin-bottom: 25px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom:1px solid #ccc ;
+    outline: none;
+    padding-bottom: 8px;
+    ;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 800;
+    color: #1c00b5;
+}
+
+button{
+    background: black;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+ 
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3) ;
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover{
+    color: #fff;
+    cursor: pointer; 
+}
+
+button:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #42fbf2;
+
+
+}
+
+button:hover:before{
+    transition: 0.5s all ease;
+
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1; 
+}
+
+
+
+
+.contact-left h3{
+    color: #1c00b5;
+    font-weight: 600 ;
+    margin-bottom: 30px;
+
+}
+
+.contact-right h3{
+
+    font-weight: 600 ;
+    margin-bottom: 30px;
+    
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connect With Us</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Iure quaerat exercitationem, 
+             <br>
+             sapiente animi incidunt excepturi
+             facere possimus fuga quas illum debitis nulla accusamus?</p>
+             <br>
+             <div class="contact-box">
+                <div class="contact-left">
+                    <h3>Send your request</h3>
+                    <form >
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="James ">
+                                
+                               
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Phone</label>
+                                <input type="text" placeholder="+91 498198444 ">
+                            </div>
+                            <div class="input-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="James@gmail.com ">
+                            </div>
+                            <div class="input-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder=" Your Subject">
+                            </div>
+                        </div>
+
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Your message"></textarea>
+
+                    </form>
+
+                    <button>Send</button>
+                </div>
+
+                <div class="contact-right">
+                    <h3>Reach Us</h3>
+
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td>Contactus@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Phone</td>
+                            <td>+1 012 541 6554</td>
+                        </tr>
+
+                        <tr>
+                            <td>Address</td>
+                            <td>(413) 243-2548
+                                155 Marble St
+                                Lee, Massachusetts(MA), 01238</td>
+                        </tr>
+
+
+
+                    </table>
+                </div>
+
+             </div>
+
+    </div>
+
+</body>
+</html>

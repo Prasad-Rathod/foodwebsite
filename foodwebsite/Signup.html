@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+body{
+    background-image: url(signup-b.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.signupform{
+    width: 350px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 750px;
+    text-align:center;
+    border-radius: 20px;
+}
+
+.signupform h1{
+    color: #1c8adb;
+    margin-bottom: 30px;
+}
+
+
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #999;
+    outline: none;
+    
+}
+
+button{
+    color: #fff;
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.signup-btn{
+background-color: #1c8adb;
+}
+
+.twitter-btn{
+background-color: #21afde;
+}
+
+a{
+    text-decoration: none;
+}
+
+.or{
+    background:transparent;
+    width: 30px;
+    margin: 15px auto 10px;
+}
+
+img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="signupform">
+        <img src="user.png" alt="">
+        <h1>Sign Up Now</h1>
+        <form action="success.html" onsubmit="return msg()" >
+            <input type="email" class="input-box" id="emialid" placeholder="Email" >
+            <p id="p1" style="color: red;"></p>
+            <input type="password" class="input-box" id="password" placeholder="password" >
+            <p id="p2" style="color: red;"></p>
+            <p><span><input type="checkbox" required></span> I agree to the terms of services</p>
+            
+            <button type="submit" class="signup-btn">sign up</button>
+            <br>
+            <p class="or"> OR</p>
+            <a href="https://www.facebook.com/"><button type="button" class="twitter-btn">Login with Facebook</button></a>
+             <p>Do you have an Account ? <a href="#">Sign in</a></p>
+
+
+        </form>
+    </div>
+
+
+    <script>
+
+        function msg()
+        {
+            var a = document.getElementById("emialid").value;
+            var b = document.getElementById("password").value;
+
+            if(a!="")
+            {
+                for(var i=0;i<a.length;i++)
+                {
+                  
+                   if(a.charAt(i)=="#" || a.charAt(i)=="&" || a.charAt(i)=="^")
+                   {
+                    document.getElementById("p1").innerHTML="Please Don't enter Char like #,^,&,*,?,/,%"; 
+                    return false;
+                   }
+                }
+                
+            }
+
+            
+            if(b!="")
+            {
+                for(var i=0;i<b.length;i++)
+                {
+                  
+                   if(b.length<=6 || b.length>=14)
+                   {
+                    document.getElementById("p2").innerHTML="Password length Must be between 6 to 14."; 
+                    return false;
+                   }
+                }
+               
+            }
+
+
+            if(a=="")
+            {
+                document.getElementById("p1").innerHTML="Please Enter Email Id";
+                return false;
+            }
+
+            if(b=="")
+            {
+                document.getElementById("p2").innerHTML="Please Enter Password";
+                return false;
+            }
+
+            alert("User Email Id: "+a+"\nUser Password: "+b);
+                  
+            return true;
+        }
+    </script>
+</body>
+</html>

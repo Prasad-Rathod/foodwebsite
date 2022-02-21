@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 100vh;
+  
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    animation: animate 16s ease-in-out infinite;
+    
+}
+
+@keyframes animate{
+    0%,100%{
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(back.jpg);
+    }
+
+    25%{
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(back1.jpg);
+    }
+    50%{
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(back2.jpg);
+    }
+    100%{
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(back3.jpg);
+    }
+}
+
+.nav-bar{
+    display: flex;
+    padding: 20px 120px;
+
+}
+
+.nav-logo img{
+    margin-top: 05px;
+    width: 60px;
+  
+}
+
+.nav-links{
+    flex: "";
+}
+
+.nav-links ul{
+    margin-left: 50px;
+    display: flex;
+    padding: 11px;
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+
+.nav-links ul a{
+color: #fff;
+text-decoration: none;
+font-size: 20px;
+
+}
+
+.nav-links ul li::after{
+width: 0;
+height: 2px;
+background: yellow;
+display: block;
+margin: auto;
+}
+
+.nav-links ul li:hover{
+   color: #32CD32;
+   text-transform: uppercase;
+   cursor: pointer;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+
+.btn{
+    padding: 10px 20px;
+    border: 0;
+    background: #32CD32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links .btn{
+    display: flex;
+    margin-left: 1505px;
+    margin-top: -50px;
+}
+
+.banner-title{
+    margin: 80px 130px;
+    color: #fff;
+}
+
+.banner-title h1{
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+.banner-title h1 span{
+color: #32CD32;
+}
+
+.vertical-bar{
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.search-icon{
+    height: 60%;
+    width: 60px;
+}
+
+.search-icon .fa{
+margin: 40px 18px;
+display: flex;
+color: #fff;
+font-size: 20px;
+cursor: pointer;
+}
+
+
+.search-icon .fas{
+    margin: 40px 18px;
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* search box */
+.searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -900px;
+    
+}
+
+.searchtext{
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+   
+}
+
+.searchBtn{
+margin-left: 10px;
+font-size: 23px;
+color: #fff;
+}
+
+/* search box */
+
+.social-icon{
+    height: 35%;
+    width: 60px;
+    background: #32CD32;
+    text-align: center;
+    padding-top: 57%;
+    bottom: 0;
+    position: absolute;
+}
+
+.social-icon .fab{
+margin: 1px 0.5px;
+display: flex;
+padding: 10px;
+cursor: pointer;
+font-size: 40px;
+color: black;
+}
+
+
+
+
